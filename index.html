@@ -37,6 +37,13 @@
             Currently showing books
         </div>
 
+        <ul>
+            <li v-for="book in books">
+                <h3>{{ book.title }}</h3>
+                <p>{{ book.author }}</p>
+            </li>
+        </ul>
+
         <br>
         <!-- Mouse Events -->
         <div class="box" @:mouseover="handleEvent($event, 1)">mouseover</div>
