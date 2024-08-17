@@ -13,6 +13,11 @@
             margin: 20px;
             display: inline-block;
         }
+        /* styles for dynamic classes */
+        .fav {
+            color: white;
+            background-color: pink;
+        }
     </style>
 </head>
 <body>
@@ -20,37 +25,40 @@
 
     <div id="app">
         <!-- Attribute Binding-->
+        <a :href="url">cool website</a>
 
-        <!-- <a :href="url">cool website</a> -->
-
+        <!-- v-if -->
         <div v-if="showBooks">
             <p>{{ title }} - {{ author }} - {{ age }}</p>
         </div>
 
+        <!-- on click event -->
         <button @:click="age++">Increase Age</button>
         <button @:click="age--">Decrease Age</button>
-
         <button @:click="changeTitle('Oathbringer')">Change Name</button>
 
+        <!-- v-if, v-else, on click -->
         <button @:click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
             <span v-else>Show Books</span>
         </button>
 
+        <!-- v-show -->
         <div v-show="showBooks">
             Currently showing books
         </div>
 
+        <!-- v-for, data binding, dynamic classes -->
         <ul>
-            <li v-for="book in books">
+            <li v-for="book in books" :class="{ fav: book.isFav }">
                 <img :src="book.img" :alt="book.title" height="100px" width="100px">
                 <h3>{{ book.title }}</h3>
                 <p>{{ book.author }}</p>
             </li>
         </ul>
 
-        <br>
         <!-- Mouse Events -->
+        <br>
         <div class="box" @:mouseover="handleEvent($event, 1)">mouseover</div>
         <div class="box" @:mouseLeave="handleEvent($event, 1)">mouseleave</div>
         <div class="box" @:dblclick="handleEvent($event, 1)">double click</div>

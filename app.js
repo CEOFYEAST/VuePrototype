@@ -8,9 +8,9 @@ const app = Vue.createApp({
             x: 0,
             y: 0,
             books: [
-                {title: 'name of the wind', author: 'patrick rothfuss', img: './assets/img_01.jpg' },
-                {title: 'the way of kings', author: 'brandon sanderson', img: './assets/img_02.jpg' },
-                {title: 'the final empire', author: 'brandon sanderson', img: './assets/img_03.jpg' }
+                {title: 'name of the wind', author: 'patrick rothfuss', img: './assets/img_01.jpg', isFav: true },
+                {title: 'the way of kings', author: 'brandon sanderson', img: './assets/img_02.jpg', isFav: false },
+                {title: 'the final empire', author: 'brandon sanderson', img: './assets/img_03.jpg', isFav: false }
             ],
             url: "https://trello.com/b/Gi4Z6V3J/factorio-production-calculator"
         }
