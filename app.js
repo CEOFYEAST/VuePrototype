@@ -11,7 +11,8 @@ const app = Vue.createApp({
                 {title: 'name of the wind', author: 'patrick rothfuss' },
                 {title: 'the way of kings', author: 'brandon sanderson'},
                 {title: 'the final empire', author: 'brandon sanderson'}
-            ]
+            ],
+            url: "https://trello.com/b/Gi4Z6V3J/factorio-production-calculator"
         }
     },
     methods: {
