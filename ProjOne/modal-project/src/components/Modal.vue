@@ -1,29 +1,39 @@
 <template>
     <div class="backdrop">
-        <div class="modal">
-            <h1>Modal Title</h1>
+        <div class="modal" :class="[theme, { 'sale': sale }]">
+            <h1>{{ header }}</h1>
             <br>
-            <p>modal content</p>
+            <p>{{ text }}</p>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: [ 'header', 'text', 'theme', 'sale' ]
+}
+</script>
 
 <style scoped>
     .modal {
         width: 400px;
         padding: 20px;
         margin: 100px auto;
-        background: white;
         border-radius: 10px;
+    }
+    .dark {
+        background: black;
+        color:white;
+    }
+    .light {
+        background: white;
+        color:black;
     }
     .backdrop {
         top: 0;
         position: fixed;
-        background: black;
+        background: white;
         width: 100%;
         height: 100%;
-    }
-    h1 {
-        color: green;
     }
 </style>

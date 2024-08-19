@@ -1,5 +1,6 @@
 <template>
-  <Modal />
+  <h1>{{ title }}</h1>
+  <Modal :header="header" :text="text" :theme="theme" :sale="sale" />
 </template>
 
 <script>
@@ -9,6 +10,16 @@ export default {
   name: 'App',
   components: {
     Modal
+  },
+  data () {
+    return {
+      header: "stuff sold here",
+      text: "get some stuff at a reasonable price",
+      theme: "dark",
+      sale: "true",
+      title: "First Vue Project",
+      showModal: false
+    }
   }
 }
 </script>
