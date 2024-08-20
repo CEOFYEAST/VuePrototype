@@ -3,16 +3,15 @@
   <p>Welcome!</p>
   <button @click.alt="toggleModal">open modal (alt)</button>
   <div v-if="showModal">
-    <Modal :theme="theme" :sale="sale" @close="toggleModal">
-       <template v-slot:links>
-        <a href="#">sign up now?</a>
-        <a href="#">more info</a>
-       </template>
-      <h1>Giveaway!</h1>
-      <p>Grab swag for half price!</p>
+    <Modal :sale="sale" @close="toggleModal">
+      <h1>Welcome to the Diebold store</h1>
+      <p v-if="sale">SALE!! Everything Half-Off</p>
+      <template v-slot:links>
+        <a href="#">Hot Items</a>
+        <a href="#">Rewards Program</a>
+      </template>
     </Modal>
   </div>
-  
 </template>
 
 <script>
@@ -25,11 +24,7 @@ export default {
   },
   data () {
     return {
-      header: "stuff sold here",
-      text: "get some stuff at a reasonable price",
-      theme: "dark",
-      sale: "true",
-      title: "My App",
+      sale: true,
       showModal: false
     }
   },

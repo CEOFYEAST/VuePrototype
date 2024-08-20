@@ -1,6 +1,6 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
-        <div class="modal" :class="[theme, { 'sale': sale }]">
+        <div class="modal" :class="{ 'sale': sale }">
             <slot>Default Content</slot>
             <div class="actions">
                 <slot name="links"></slot>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    props: [ 'theme', 'sale' ],
+    props: [ 'sale' ],
     methods: {
         closeModal() {
             this.$emit('close')
@@ -25,15 +25,8 @@ export default {
         width: 400px;
         padding: 20px;
         margin: 100px auto;
-        border-radius: 10px;
-    }
-    .dark {
-        background: black;
-        color:white;
-    }
-    .light {
-        background: white;
-        color:black;
+        border: 2px solid black;
+        border-radius: 4px;
     }
     .backdrop {
         top: 0;
