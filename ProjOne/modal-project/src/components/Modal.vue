@@ -2,7 +2,9 @@
     <div class="backdrop" @click.self="closeModal">
         <div class="modal" :class="[theme, { 'sale': sale }]">
             <slot>Default Content</slot>
-            
+            <div class="actions">
+                <slot name="links"></slot>
+            </div>
         </div>
     </div>
 </template>
