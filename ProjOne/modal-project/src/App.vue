@@ -3,7 +3,14 @@
   <p>Welcome!</p>
   <button @click.alt="toggleModal">open modal (alt)</button>
   <div v-if="showModal">
-    <Modal :header="header" :text="text" :theme="theme" :sale="sale" @close="toggleModal" />
+    <Modal :theme="theme" :sale="sale" @close="toggleModal">
+       <template v-slot:links>
+        <a href="#">sign up now?</a>
+        <a href="#">more info</a>
+       </template>
+      <h1>Giveaway!</h1>
+      <p>Grab swag for half price!</p>
+    </Modal>
   </div>
   
 </template>
