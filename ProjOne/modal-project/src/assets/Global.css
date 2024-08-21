@@ -1,0 +1,16 @@
+.flex { display: flex; }
+.flex.top { align-items: start; }
+.flex.middle { align-items: center; }
+.flex.bottom { align-items: end; }
+.flex.left { justify-content: left; }
+.flex.center { justify-content: center; }
+.flex.right { justify-content: right; }
+.flex.row { flex-direction: row; }
+.flex.column { flex-direction: column; }
+.flex.space { justify-content: space-between; }
+.x1 { flex: 1; }
+.x2 { flex: 2; }
+.x3 { flex: 3; }
+.x4 { flex: 4; }
+.x5 { flex: 5; }
+.inline { display: inline; }

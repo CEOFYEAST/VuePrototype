@@ -2,7 +2,7 @@
     <div class="backdrop" @click.self="closeModal">
         <div class="modal" :class="{ 'sale': sale }">
             <slot>Default Content</slot>
-            <div class="actions">
+            <div class="actions flex column">
                 <slot name="links"></slot>
             </div>
         </div>
@@ -34,5 +34,9 @@ export default {
         background: white;
         width: 100%;
         height: 100%;
+    }
+    .modal.sale {
+        color: green;
+        background-color: red;
     }
 </style>
