@@ -1,6 +1,6 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
-        <div class="modal" :class="{ 'sale': sale }">
+        <div class="modal" :class="[theme=theme, { 'sale': sale }]">
             <slot>Default Content</slot>
             <div class="actions flex column">
                 <slot name="links"></slot>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    props: [ 'sale' ],
+    props: [ 'sale', 'theme' ],
     methods: {
         closeModal() {
             this.$emit('close')
@@ -39,4 +39,9 @@ export default {
         color: green;
         background-color: red;
     }
+    .modal.dark {
+        color: white;
+        background-color: black;
+    }
+    
 </style>

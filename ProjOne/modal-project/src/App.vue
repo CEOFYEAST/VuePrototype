@@ -3,7 +3,8 @@
   <p>Welcome!</p>
   <button @click.alt="toggleModal">open modal (alt)</button>
   <button @click.ctrl="toggleModalTwo">open modal two (ctrl)</button>
-  <div v-if="showModal">
+
+  <teleport to=".modals" v-if="showModal">
     <Modal :sale="sale" @close="toggleModal">
       <h1>Welcome to the Diebold store</h1>
       <p v-if="sale">SALE!! Everything Half-Off</p>
@@ -12,9 +13,9 @@
         <a href="#">Rewards Program</a>
       </template>
     </Modal>
-  </div>
+  </teleport>
 
-  <div v-if="showModalTwo">
+  <teleport to=".modals" v-if="showModalTwo">
     <Modal :theme="theme" @close="toggleModalTwo">
       <h1>Contact Info</h1>
       <p>You can reach us @</p>
@@ -22,7 +23,7 @@
         <a href="#">816-718-0592</a>
       </template>
     </Modal>
-  </div>
+  </teleport>
 </template>
 
 <script>
@@ -53,7 +54,7 @@ export default {
 </script>
 
 <style>
-#app {
+#app, .modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
