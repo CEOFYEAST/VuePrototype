@@ -2,7 +2,7 @@
   <div>
     <h1>Ninja Reaction Timer</h1>
     <button @click="startGame()" :disabled="isPlaying">Start</button>
-    <!-- <Block :delay="delay" v-if="isPlaying"></Block> -->
+    <Block :delay="delay" v-if="isPlaying"></Block>
   </div>
 </template>
 
