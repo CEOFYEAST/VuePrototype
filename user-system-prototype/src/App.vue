@@ -1,12 +1,15 @@
 <template>
-  <SignInForm  />
+  <SignInForm></SignInForm>
 </template>
 
 <script>
   import SignInForm from './components/SignInForm.vue'
 
-  components: {
-    SignInForm
+  export default {
+    name: 'app',
+    components: {
+      SignInForm
+    }
   }
 </script>
 
