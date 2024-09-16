@@ -1,11 +1,11 @@
 <template>
-  <main>
+  <div class="root">
 
-    <div class="root" id="top-nav-body">
-      <slot></slot>
-    </div>
+      <nav>
+        <slot></slot>
+      </nav>
 
-  </main>
+  </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.root {
+nav {
   width: 100%;
   background-color: greenyellow;
   border-bottom: 1px solid black;

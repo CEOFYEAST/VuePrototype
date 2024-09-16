@@ -1,10 +1,17 @@
 <template>
     <div class="root">
-        <SignInForm v-if="this.showSignInModal" @toggle-show-modal="this.$emit('toggleShowModal')"></SignInForm>
+
+        <main>
+            <ModalDialog v-if="this.showSignInModal" @toggle-show-modal="this.$emit('toggleShowModal')">
+                <SignInForm></SignInForm>
+            </ModalDialog>
+        </main>
+        
     </div>
 </template>
 
 <script>
+import ModalDialog from './ModalDialog.vue';
 import SignInForm from './SignInForm.vue'
 
 export default {
@@ -13,13 +20,14 @@ export default {
         'showSignInModal'
     ],
     components: {
+        ModalDialog,
         SignInForm
     }
 }
 </script>
 
 <style scoped>
-.root {
+main {
     display: flex;
     align-items: center;
     justify-content: center;
