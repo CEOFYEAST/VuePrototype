@@ -40,11 +40,9 @@ export default {
         display: flex;
         flex-direction: column;
         border: 1px solid black;
-        background-color: purple;
     }
 
     main {
-        background-color: blue;
         padding-top: 10px;
         padding-left: 15px;
         padding-right: 15px;

@@ -1,8 +1,10 @@
 <template>
-  <TheNav class="flex center">
-    <button @click="toggleSignInModal">Sign In</button>
-  </TheNav>
-  <TheMain :showSignInModal="showSignInModal" @toggle-show-modal="toggleSignInModal"></TheMain>
+  <div class="root">
+    <TheNav class="flex center">
+      <button @click="toggleSignInModal">Sign In</button>
+    </TheNav>
+    <TheMain :showSignInModal="showSignInModal" @toggle-show-modal="toggleSignInModal"></TheMain>
+</div>
 </template>
 
 <script>
